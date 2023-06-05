@@ -1,0 +1,17 @@
+.product {
+//   max-width: 280px;
+  &__image {
+     position: relative;
+     .heart {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+     }
+    img {
+    //  aspect-ratio: auto 460 / 691;
+    width: 100%;
+    }
+  }
+
+
+}

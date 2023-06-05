@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { useEffect, useState } from 'react';
+import bannerImage from './assets/banner.jpg';
+import './App.scss';
+import { ProductCard } from './components/ProductCard.js';
+const App = () => {
+  const [shoes, setShoes] = useState([{
+    "id": 1,
+    "name": "Running Shoes",
+    "brand": "Nike",
+    "price": 59.99,
+    "image": "running_shoes.jpg",
+    "description": "These running shoes provide excellent cushioning and support.",
+    "category": "Sports",
+    "shoeCategory": "Running",
+    "rating": 4.5,
+    "reviews": 10,
+    "availability": true
+}, ]);
+  useEffect(() => {
+    const fetchShoes = async () => {
+      console.log(`${process.env.REACT_APP_API_URL}/get-shoes`)
+      fetch(`${process.env.REACT_APP_API_URL}/get-shoes`)
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response, 'shoes sucessfully retrieved');
+          setShoes(response);
+        })
+        .catch((error) =>
+          console.log('something went wrong with getting shoes', error)
+        );
+    };
+    fetchShoes();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='homepage'>
+      <div
+        className='homepage__banner'
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      >
+        <div className='homepage__banner-overlay d-flex align-items-center pl-4'>
+          <h1 className='ml-4'>Shoes</h1>
+        </div>
+      </div>
+      {/* a simple header comes in here */}
+      <div className='homepage__main container mt-5'>
+        {shoes.map((shoe) => (
+          <ProductCard product={shoe} key={shoe.id} />
+        ))}
+      </div>
+      {/* add a card here you can loop over and display */}
     </div>
   );
-}
+};
 
 export default App;

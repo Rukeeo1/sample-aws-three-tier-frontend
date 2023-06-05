@@ -1,0 +1,23 @@
+.homepage {
+  &__banner {
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    position: relative;
+  }
+
+  &__banner-overlay {
+      position: absolute;
+      top: 0;
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      color: #fff;
+  }
+  &__main{
+      display: flex;
+    //   flex-wrap: wrap;
+      gap: 6px;
+  }
+}
