@@ -25,16 +25,12 @@ const App = () => {
     const fetchShoes = async () => {
       // this is a test app, ignore the console.log
       console.log(`${process.env.REACT_APP_API_URL}/get-shoes`);
-      console.log(process.env.REACT_APP_HOST,'host')
 
 
       axios
         .get(`${process.env.REACT_APP_API_URL}/get-shoes`, {
           headers: {
             'Accept': '*/*',
-            'Host': process.env.REACT_APP_HOST,
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
           },
         })
         .then((response) => {
