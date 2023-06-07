@@ -4,7 +4,6 @@ import bannerImage from './assets/banner.jpg';
 import './App.scss';
 import { ProductCard } from './components/ProductCard.js';
 
-
 const App = () => {
   const [shoes, setShoes] = useState([
     {
@@ -24,37 +23,29 @@ const App = () => {
   ]);
   useEffect(() => {
     const fetchShoes = async () => {
+      // this is a test app, ignore the console.log
       console.log(`${process.env.REACT_APP_API_URL}/get-shoes`);
+      console.log(process.env.REACT_APP_HOST,'host')
+
 
       axios
         .get(`${process.env.REACT_APP_API_URL}/get-shoes`, {
           headers: {
-            Accept: '*/*',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers':
-              'Origin, X-Requested-With, Content-Type, Accept',
+            'Accept': '*/*',
+            'Host': process.env.REACT_APP_HOST,
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
           },
         })
         .then((response) => {
           // Handle the successful response
-          console.log(response.data);
+          console.log(response.data,'data retrieved');
           setShoes(response.data);
         })
         .catch((error) => {
           // Handle the error
           console.error(error, 'there was an error fetching data');
         });
-
-      // fetch(`${process.env.REACT_APP_API_URL}/get-shoes`)
-      //   .then((response) => response.json())
-      //   .then((response) => {
-      //     console.log(response, 'shoes sucessfully retrieved');
-      //     setShoes(response);
-      //   })
-      //   .catch((error) =>
-      //     console.log('something went wrong with getting shoes', error)
-      //   );
     };
     fetchShoes();
   }, []);
