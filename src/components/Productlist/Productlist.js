@@ -38,9 +38,13 @@ const Productlist = () => {
                   title="Quick view"
                   data-quick-view-init="id-11"
                 >
-                  <Svgs.Eye />
+                  <Svgs.Eye className="product__eye" />
                 </button>
               </div>
+
+              <span class="product__number-of-color-tile flex">
+                + 6 colours
+              </span>
             </div>
           </div>
         </div>

@@ -232,4 +232,28 @@
   height: 36px;
   min-width: 36px;
   min-height: 36px;
+}
+.product__eye {
+  font-family: inherit;
+  color: #292929;
+  fill: #292929;
+  cursor: pointer;
+  pointer-events: none;
+  width: 19px;
+  height: 19px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.product__number-of-color-tile {
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  color: #767676;
+  font-size: 13px;
+  line-height: 20px;
+  display: flex;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=Productlist.css.map */
