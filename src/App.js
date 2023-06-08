@@ -26,16 +26,15 @@ const App = () => {
       // this is a test app, ignore the console.log
       console.log(`${process.env.REACT_APP_API_URL}/get-shoes`);
 
-
       axios
         .get(`${process.env.REACT_APP_API_URL}/get-shoes`, {
           headers: {
-            'Accept': '*/*',
+            Accept: '*/*',
           },
         })
         .then((response) => {
           // Handle the successful response
-          console.log(response.data,'data retrieved');
+          console.log(response.data, 'data retrieved');
           setShoes(response.data);
         })
         .catch((error) => {
@@ -48,12 +47,21 @@ const App = () => {
   return (
     <div className='homepage'>
       <div
-        className='homepage__banner'
+        className='homepage__banner d-flex align-items-center'
         style={{ backgroundImage: `url(${bannerImage})` }}
       >
-        <div className='homepage__banner-overlay d-flex align-items-center pl-4'>
-          <h1 className='ml-4'>Shoes</h1>
+        <div className='homepage__brand-message'>
+          <h1 className='ml-4'>Shoeshine</h1>
+          <p className='mt-2'>
+            Step into style and comfort with our exquisite collection of shoes.
+          </p>
+          <div >
+            <button className='btn-cta'>Voor hem</button>
+            <button className='btn-cta ml-4'>Voor hem</button>
+          </div>
         </div>
+
+        <div className='homepage__banner-overlay d-flex align-items-center pl-4'></div>
       </div>
       {/* a simple header comes in here */}
       <div className='homepage__main container mt-5'>

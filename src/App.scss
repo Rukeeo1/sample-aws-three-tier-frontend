@@ -20,4 +20,39 @@
     //   flex-wrap: wrap;
       gap: 6px;
   }
+
+  &__brand-message {
+    color: white;
+    z-index: 2;
+    padding: 0 4rem;
+
+    z-index: 2;
+  }
+  h1{
+    font-size: 4rem;
+  }
+  p{
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  .btn-cta  {  display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    height: 4.4rem;
+    min-height: 4.4rem;
+    padding: 0 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 27px;
+    background-color: #fff;
+    color: #292929;
+    fill: #292929;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-right: 1rem;
+
+  }
+
 }
