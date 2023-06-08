@@ -1,6 +1,4 @@
 import React from "react";
-import LacosteNeo from "../../assets/lacoste-neo.jpg";
-import { Svgs } from "../../assets/svgs";
 import { products } from "./ProductlistDetails";
 import "./Productlist.css";
 
@@ -14,7 +12,8 @@ const Productlist = () => {
       {/* productlist */}
 
       <div className="product__list-container">
-        <div className="product__slide-list">
+        <div className="product__slider-list">
+          {/* <div className="product__slide-box"> */}
           {products.map((product, index) => (
             <div className="product__item-container" key={index}>
               <div className="product__image-wrapper">
@@ -51,6 +50,7 @@ const Productlist = () => {
             </div>
           ))}
         </div>
+        {/* </div> */}
       </div>
     </div>
   );

@@ -13,6 +13,9 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.homepage {
+  overflow: hidden;
+}
 .homepage__banner {
   background-size: cover;
   background-position: center center;
