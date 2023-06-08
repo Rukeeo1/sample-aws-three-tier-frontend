@@ -45,6 +45,12 @@ const Productlist = () => {
               <span class="product__number-of-color-tile flex">
                 + 6 colours
               </span>
+
+              <div class="product__title-flags">
+                <div class="product__item-flag item-flag">
+                  Bestseller
+                </div>
+              </div>
             </div>
           </div>
         </div>

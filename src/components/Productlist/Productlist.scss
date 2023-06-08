@@ -271,4 +271,35 @@
     display: flex;
     margin-bottom: 5px;
   }
+
+  &__title-flags {
+    color: #292929;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__item-flag {
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    line-height: 22px !important;
+    padding: 0 7px;
+    background-color: rgba(41, 41, 41, 0.6);
+    color: #fff;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin-right: 0;
+  }
 }
