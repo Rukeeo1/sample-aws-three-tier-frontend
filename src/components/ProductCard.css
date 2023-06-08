@@ -1,0 +1,11 @@
+.product__image {
+  position: relative;
+}
+.product__image .heart {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.product__image img {
+  width: 100%;
+}/*# sourceMappingURL=ProductCard.css.map */
