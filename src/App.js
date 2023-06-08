@@ -20,6 +20,48 @@ const App = () => {
       reviews: 10,
       availability: true,
     },
+    // {
+    //   id: 2,
+    //   name: 'Running Shoes',
+    //   brand: 'Nike',
+    //   price: 59.99,
+    //   image: 'running_shoes.jpg',
+    //   description:
+    //     'These running shoes provide excellent cushioning and support.',
+    //   category: 'Sports',
+    //   shoeCategory: 'Running',
+    //   rating: 4.5,
+    //   reviews: 10,
+    //   availability: true,
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Running Shoes',
+    //   brand: 'Nike',
+    //   price: 59.99,
+    //   image: 'running_shoes.jpg',
+    //   description:
+    //     'These running shoes provide excellent cushioning and support.',
+    //   category: 'Sports',
+    //   shoeCategory: 'Running',
+    //   rating: 4.5,
+    //   reviews: 10,
+    //   availability: true,
+    // },
+    // {
+    //   id: 1,
+    //   name: 'Running Shoes',
+    //   brand: 'Nike',
+    //   price: 59.99,
+    //   image: 'running_shoes.jpg',
+    //   description:
+    //     'These running shoes provide excellent cushioning and support.',
+    //   category: 'Sports',
+    //   shoeCategory: 'Running',
+    //   rating: 4.5,
+    //   reviews: 10,
+    //   availability: true,
+    // },
   ]);
   useEffect(() => {
     const fetchShoes = async () => {
@@ -65,8 +107,8 @@ const App = () => {
       </div>
       {/* a simple header comes in here */}
       <div className='homepage__main mt-5 px-5'>
-        {shoes.map((shoe) => (
-          <ProductCard product={shoe} key={shoe.id} />
+        {shoes.map((shoe, index) => (
+          <ProductCard product={shoe} imageId={index} key={shoe.id} />
         ))}
       </div>
       {/* add a card here you can loop over and display */}
