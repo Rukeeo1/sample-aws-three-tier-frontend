@@ -64,7 +64,7 @@ const App = () => {
         <div className='homepage__banner-overlay d-flex align-items-center pl-4'></div>
       </div>
       {/* a simple header comes in here */}
-      <div className='homepage__main container mt-5'>
+      <div className='homepage__main mt-5 px-5'>
         {shoes.map((shoe) => (
           <ProductCard product={shoe} key={shoe.id} />
         ))}
